@@ -4,6 +4,7 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { PlanModule } from './plan/plan.module';
 import { CompanyProfileModule } from './company_profile/company_profile.module';
+import { UserProfileModule } from './user_profile/user_profile.module';
 
 
 @Module({
@@ -11,17 +12,18 @@ import { CompanyProfileModule } from './company_profile/company_profile.module';
     TypeOrmModule.forRoot({
       type: "postgres",
       host: "localhost",
-      port: 5431,
-      username: "yufinder",
+      port: 5438,
+      username: "yufinderv1",
       password: "root",
-      database: "db_yufinder",
+      database: "db_yufinderv1",
       autoLoadEntities: true,
       synchronize: true,
     }),
     UsersModule,
     AuthModule,
     PlanModule,
-    CompanyProfileModule,],
+    CompanyProfileModule,
+    UserProfileModule,],
   controllers: [],
   providers: [],
 })

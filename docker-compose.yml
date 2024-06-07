@@ -5,10 +5,10 @@ services:
     container_name: postgres_db_yufinder
     restart: always
     environment:
-      POSTGRES_DB: db_yufinder
-      POSTGRES_USER: yufinder
+      POSTGRES_DB: db_yufinderv1
+      POSTGRES_USER: yufinderv1
       POSTGRES_PASSWORD: root
     volumes:
       - ./postgres:/var/lib/postgresql/data
     ports:
-      - "5431:5432"
+      - "5438:5432"
